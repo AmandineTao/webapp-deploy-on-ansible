@@ -15,11 +15,13 @@
       file:
         path: "/home/{{ ansible_user }}/webapp/"
         state: directory
+        
     - name: "Install git"
-      dnf:
+      yum:
         name: git
         state: present
-        update_cache: yes
+        #update_cache: yes
+        
     - name: "git clone to nginx folder"
       git:
         repo: https://github.com/diranetafen/static-website-example.git
