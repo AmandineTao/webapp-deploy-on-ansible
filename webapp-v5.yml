@@ -16,7 +16,7 @@
         path: "/home/{{ ansible_user }}/webapp/"
         state: directory
     - name: "Install git"
-      yum:
+      dnf:
         name: git
         state: present
         update_cache: yes
